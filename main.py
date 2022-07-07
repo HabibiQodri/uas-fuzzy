@@ -1,4 +1,4 @@
-data = float( input("masukkan string : "))
+print(20*"=")
+print("MHD Habibi Febrioyon Qodri")
+print(20*"=")
 
-print(data)
-print(type(data))
