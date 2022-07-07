@@ -1,4 +1,4 @@
-#contoh
-print("sdasad")
-print("sdasad")
-print("sdasad")
+data = float( input("masukkan string : "))
+
+print(data)
+print(type(data))
