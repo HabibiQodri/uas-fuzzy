@@ -110,27 +110,27 @@ print(cek_h)
 
 if cek_kk == False and cek_f == False and cek_h == False:
     alfa = min(kiri_kk, kiri_fasilitas, kiri_harga)
-    hasil = 18 + (alfa*(26-18))
+    hasil = xmin_hasil +  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == False and cek_f == False and cek_h == True:
     alfa = min(kiri_kk, kiri_fasilitas, kanan_harga)
-    hasil = 26 - (alfa*(26-18))
+    hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == False and cek_f == True and cek_h == False:
     alfa = min(kiri_kk, kanan_fasilitas, kiri_harga)
-    hasil = 26 - (alfa*(26-18))
+    hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == False and cek_f == True and cek_h == True:
     alfa = min(kiri_kk, kanan_fasilitas, kanan_harga)
-    hasil = 26 - (alfa*(26-18))
+    hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == True and cek_f == False and cek_h == False:
     alfa = min(kanan_kk, kiri_fasilitas, kiri_harga)
-    hasil = 18 + (alfa*(26-18))
+    hasil = xmin_hasil +  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == True and cek_f == False and cek_h == True:
@@ -141,11 +141,11 @@ elif cek_kk == True and cek_f == False and cek_h == True:
     cekHasil(hasil)
 elif cek_kk == True and cek_f == True and cek_h == False:
     alfa = min(kanan_kk, kanan_fasilitas, kiri_harga)
-    hasil = 26 - (alfa*(26-18))
+    hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
 elif cek_kk == True and cek_f == True and cek_h == True:
     alfa = min(kanan_kk, kanan_fasilitas, kiri_harga)
-    hasil = 26 - (alfa*(26-18))
+    hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
     print(hasil)
     cekHasil(hasil)
