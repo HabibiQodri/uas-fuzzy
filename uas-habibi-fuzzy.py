@@ -9,9 +9,9 @@ print("|| Kelas : 06TPLM004")
 print("|| Kelas : UAS Kecerdasan Buatan")
 print(35*"=")
 
-kelas_kamar = float(input("Masukkan kelas kamar = "))
-fasilitas = float(input("Masukkan jumlah orang = "))
-harga = float(input("Masukkan suhu cuaca luar = "))
+kelas_kamar = float(input("Masukkan nilai kelas kamar = "))
+fasilitas = float(input("Masukkan nilai Fasilitas = "))
+harga = float(input("Masukkan nilai harga = "))
 
 # nilai xmax
 xmax_kelas_kamar = 15
@@ -38,7 +38,7 @@ kondisi_fasilitas = bool
 kondisi_harga = bool
 
 # true = Bagus
-# false = Tidak Bagus
+# false = Sedang
 kondisi_hasil = bool
 
 
@@ -72,11 +72,11 @@ def cekHarga(cek_harga):
 def cekHasil(cek_hasil):
     if 1 <= cek_hasil < 3:
         kondisi_hasil = False
-        print(kondisi_hasil)
+        # print(kondisi_hasil)
     elif cek_hasil >= 3 and cek_hasil <= 5:
         kondisi_hasil = True
-        print(kondisi_hasil)
-    
+        # print(kondisi_hasil)
+    return kondisi_hasil
 
 # cekKelasKamar(25)
 cek_kk = cekKelasKamar(kelas_kamar)
@@ -104,48 +104,122 @@ kanan_harga = mendekatiKanan(xmax_harga, xmin_harga, harga)
 
 
 # def cek(kondisi_kelas_kamar , kondisi_fasilitas , kondisi_harga  )
-print(cek_kk)
-print(cek_f)
-print(cek_h)
+# print(cek_kk)
+# print(cek_f)
+# print(cek_h)
+# print(kiri_kk)
+# print(kiri_fasilitas)
+# print(kiri_harga)
 
 if cek_kk == False and cek_f == False and cek_h == False:
     alfa = min(kiri_kk, kiri_fasilitas, kiri_harga)
     hasil = xmin_hasil +  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
+
 elif cek_kk == False and cek_f == False and cek_h == True:
     alfa = min(kiri_kk, kiri_fasilitas, kanan_harga)
     hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == False and cek_f == True and cek_h == False:
     alfa = min(kiri_kk, kanan_fasilitas, kiri_harga)
     hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == False and cek_f == True and cek_h == True:
     alfa = min(kiri_kk, kanan_fasilitas, kanan_harga)
     hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == True and cek_f == False and cek_h == False:
     alfa = min(kanan_kk, kiri_fasilitas, kiri_harga)
     hasil = xmin_hasil +  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == True and cek_f == False and cek_h == True:
     alfa = min(kanan_kk, kiri_fasilitas, kanan_harga)
     print(alfa)
     hasil = xmin_hasil + (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == True and cek_f == True and cek_h == False:
     alfa = min(kanan_kk, kanan_fasilitas, kiri_harga)
     hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
 elif cek_kk == True and cek_f == True and cek_h == True:
     alfa = min(kanan_kk, kanan_fasilitas, kiri_harga)
     hasil = xmax_hasil -  (alfa*(xmax_hasil-xmin_hasil))
-    print(hasil)
-    cekHasil(hasil)
+    # print(hasil)
+    # cekHasil(hasil)
+    print("")
+    print("Jawaban ")
+    print("")
+    print("Nilai dari hasil = " , hasil )
+    kondisi = cekHasil(hasil)
+    if kondisi:
+        print("Hasil = Bagus")
+    else:
+        print("hasil = Sedang")
